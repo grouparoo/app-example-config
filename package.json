@@ -12,7 +12,9 @@
     "@grouparoo/core": "0.2.3-alpha.7",
     "@grouparoo/mailchimp": "0.2.3-alpha.7",
     "@grouparoo/postgres": "0.2.3-alpha.7",
-    "@grouparoo/ui-community": "0.2.3-alpha.7"
+    "@grouparoo/spec-helper": "^0.2.2",
+    "@grouparoo/ui-community": "0.2.3-alpha.7",
+    "jest": "^26.6.3"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start"
