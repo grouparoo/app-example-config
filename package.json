@@ -17,7 +17,8 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "start": "cd node_modules/@grouparoo/core && ./bin/start"
+    "start": "cd node_modules/@grouparoo/core && ./bin/start",
+    "test": "jest"
   },
   "grouparoo": {
     "plugins": [
