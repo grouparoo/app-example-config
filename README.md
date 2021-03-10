@@ -7,4 +7,4 @@ This is the code that was used in the following video: https://www.youtube.com/w
 
 ---
 
-Vist https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
+Visit https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
