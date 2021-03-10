@@ -45,7 +45,7 @@ jobs:
       - run: npm install
       # The apps/sources/etc in this project won't validate
       - run: rm -rf config
-      - run: npm test
+      - run: ./__tests__/integration
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
           REDIS_URL: redis://localhost:${{ job.services.redis.ports[6379] }}/0
