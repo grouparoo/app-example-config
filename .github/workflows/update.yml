@@ -10,7 +10,6 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'grouparoo/app-example' }}
 
     steps:
       - uses: actions/checkout@v2
