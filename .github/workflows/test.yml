@@ -43,6 +43,8 @@ jobs:
       # we want to test a 'fresh' install for new users
       - run: rm -rf node_modules && rm package-lock.json
       - run: npm install
+      # The apps/sources/etc in this project won't validate
+      - run: rm -rf config
       - run: npm test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
