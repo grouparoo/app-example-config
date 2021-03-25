@@ -108,3 +108,6 @@ dist
 
 # Databases
 *.sqlite
+
+# Mac files
+.DS_Store
