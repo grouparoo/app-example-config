@@ -6,6 +6,8 @@ const sqlite3 = require("sqlite3").verbose();
 
 const dbPath = path.join(__dirname, "./source.sqlite");
 
+console.log(`ℹ️  Source database path: ${dbPath}`);
+
 // ---------------------------------------- | Checks
 
 if (fs.existsSync(dbPath)) {
