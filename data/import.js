@@ -4,9 +4,17 @@ const parse = require("csv-parse/lib/sync");
 const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
 
+const dbPath = path.join(__dirname, "./source.sqlite");
+
+// ---------------------------------------- | Checks
+
+if (fs.existsSync(dbPath)) {
+  console.log(`❌ Source database already exists. Please delete to reimport.`);
+  process.exit(1);
+}
+
 // ---------------------------------------- | Refs
 
-const dbPath = path.join(__dirname, "./source.sqlite");
 const db = new sqlite3.Database(dbPath);
 
 const tableColumns = {
@@ -49,6 +57,7 @@ const buildValueList = (obj) => {
 const createTable = async (tableName) => {
   const query = `CREATE TABLE IF NOT EXISTS ${tableName} (${tableColumns[tableName]})`;
   await runQuery(query);
+  console.log(`✅ Created ${tableName} table.`);
 };
 
 const importCsv = async (tableName) => {
@@ -60,6 +69,7 @@ const importCsv = async (tableName) => {
     const values = buildValueList(row);
     await runQuery(`INSERT INTO ${tableName} (${keys}) VALUES (${values})`);
   }
+  console.log(`✅ Imported ${tableName}.csv.`);
 };
 
 const doImport = async (tableName) => {
