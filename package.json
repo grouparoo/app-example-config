@@ -21,6 +21,7 @@
     "sqlite3": "5.0.2"
   },
   "scripts": {
+    "import": "node ./data/import.js",
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
     "test": "jest"
   },
