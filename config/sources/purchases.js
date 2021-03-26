@@ -9,7 +9,7 @@ exports.default = async function buildConfig() {
       class: "source",
       id: "purchases",
       name: "purchases",
-      type: "postgres-table-import",
+      type: "sqlite-table-import",
       appId: "product_db", // Set this value to the ID of the App this Source uses - e.g. `appId: "data_warehouse"`
       options: {
         table: "purchases", // Name of the table in your DB - e.g. `table: "users"`
