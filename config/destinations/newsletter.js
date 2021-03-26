@@ -9,7 +9,7 @@ exports.default = async function buildConfig() {
       groupId: "all_emails", // The ID of the group whose members you want to export - e.g. `groupId: "high_value_customers"`
 
       options: {
-        listId: "1b724bb934", // The Mailchimp List ID (https://mailchimp.com/help/find-audience-id/)
+        listId: process.env.MAILCHIMP_LIST_ID, // The Mailchimp List ID (https://mailchimp.com/help/find-audience-id/)
       },
 
       // Mappings are how you choose which properties to export to this destination.
