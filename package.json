@@ -27,7 +27,7 @@
   "grouparoo": {
     "plugins": [
       "@grouparoo/mailchimp",
-      "@grouparoo/postgres",
+      "@grouparoo/sqlite",
       "@grouparoo/ui-community"
     ]
   }
