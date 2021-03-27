@@ -9,13 +9,13 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.2.8",
-    "@grouparoo/mailchimp": "0.2.8",
-    "@grouparoo/postgres": "0.2.8",
-    "@grouparoo/ui-community": "0.2.8"
+    "@grouparoo/core": "0.2.9",
+    "@grouparoo/mailchimp": "0.2.9",
+    "@grouparoo/postgres": "0.2.9",
+    "@grouparoo/ui-community": "0.2.9"
   },
   "devDependencies": {
-    "@grouparoo/spec-helper": "0.2.8",
+    "@grouparoo/spec-helper": "0.2.9",
     "jest": "^26.6.3"
   },
   "scripts": {
