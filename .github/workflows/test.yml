@@ -45,6 +45,9 @@ jobs:
       - run: npm install
       # The apps/sources/etc in this project won't validate
       - run: rm -rf config
+      - run: npm run import
+      - run: mkdir config
+      - run: cp __tests__/fixtures/sqlite-source-config.js ./config
       - run: npm run test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres

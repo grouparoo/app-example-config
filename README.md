@@ -34,6 +34,16 @@ To start running Grouparoo, run the `start` script:
 
 Now you're off to the races! This will begin the import and export and will also start a UI web server, which you can visit at http://localhost:3000/.
 
+## Testing
+
+This project is configured to run a [Jest](https://jestjs.io/) test suite. To run the tests locally, use the following command:
+
+    $ npm run test
+
+There is also a configuration file that can be used to run the tests using [GitHub Actions](https://github.com/features/actions). This file is `.github/workflows/test.yml`.
+
+Note that this process removes your entire `config` directory and replaces it with a series of config objects presented in `__tests__/fixtures/sqlite-source-config.js`.
+
 ## Other Grouparoo Examples
 
 Visit https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
