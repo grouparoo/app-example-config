@@ -39,18 +39,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: cp .env.example .env
-      # we want to test a 'fresh' install for new users
-      - run: rm -rf node_modules && rm package-lock.json
-      - run: npm install
-      # The apps/sources/etc in this project won't validate
-      - run: rm -rf config
-      - run: ./__tests__/integration
-        env:
-          DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
-          REDIS_URL: redis://localhost:${{ job.services.redis.ports[6379] }}/0
-          PORT: 3000
-          WEB_URL: http://localhost:3000
-          WEB_SERVER: true
-          WORKERS: 1
-          GROUPAROO_TELEMETRY_ENABLED: false
+      - name: Copy environment variable files
+        run: cp __tests__/.env.example __tests__/.env
+      - name: Remove cached dependencies
+        run: rm -rf node_modules && rm package-lock.json
+      - name: Install dependencies
+        run: npm install
+      - name: Load source data
+        run: npm run import
+      - run: npm run test

@@ -105,3 +105,9 @@ dist
 
 # Environment
 .env
+
+# Databases
+*.sqlite
+
+# Mac files
+.DS_Store
