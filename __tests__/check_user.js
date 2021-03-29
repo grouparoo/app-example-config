@@ -1,9 +1,3 @@
-/**
- * @jest-environment node
- */
-
-process.env.GROUPAROO_ENV_CONFIG_FILE = `${__dirname}/.env`;
-
 const { helper } = require("@grouparoo/spec-helper");
 
 describe("snapshot", () => {

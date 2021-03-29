@@ -42,7 +42,7 @@ This project is configured to run a [Jest](https://jestjs.io/) test suite. To ru
 
 There is also a configuration file that can be used to run the tests using [GitHub Actions](https://github.com/features/actions). This file is `.github/workflows/test.yml`.
 
-Note that this process removes your entire `config` directory and replaces it with a series of config objects presented in `__tests__/fixtures/sqlite-source-config.js`.
+Note that Jest is configured to use `__tests__/.env` for environment variables and `__tests__/fixtures/config` as the directory in which to place your test configuration files. These values are set in `jest.config.js`.
 
 ## Other Grouparoo Examples
 
