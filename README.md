@@ -14,8 +14,6 @@ To get started, first install the dependencies:
 
 ### Setup Source Database
 
-This project uses a SQLite source. If you don't have SQLite installed locally, [install it](https://www.tutorialspoint.com/sqlite/sqlite_installation.htm).
-
 The SQLite source database gets created from two CSV files in the `data` directory. You can create and load this data by running the import script:
 
     $ npm run import
