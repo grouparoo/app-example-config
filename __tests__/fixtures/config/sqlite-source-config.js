@@ -52,7 +52,7 @@ exports.default = async function buildConfig() {
       sourceId: "users",
       type: "email",
       unique: true,
-      identifying: true,
+      identifying: false,
       isArray: false,
       options: {
         column: "email",

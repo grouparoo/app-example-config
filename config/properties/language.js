@@ -7,7 +7,7 @@ exports.default = async function buildConfig() {
       sourceId: "users", // The ID of the Source that this Property belongs to - e.g. `sourceId: "users_table"`
       type: "string", // The type of the Property.  Options are: "boolean", "date", "email", "float", "integer", "phoneNumber", "string", "url"
       unique: false, // Will Profiles have unique records for this Property?
-      identifying: true, // Should we consider this property Identifying in the UI? Only one Property can be identifying.
+      identifying: false, // Should we consider this property Identifying in the UI? Only one Property can be identifying.
       isArray: false, // Is this an Array Property?
       options: {
         column: "language", // The column to use for this Property - e.g. `column: "first_name"`
