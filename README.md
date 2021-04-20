@@ -36,13 +36,13 @@ Now you're off to the races! This will begin the import and export and will also
 
 ## Testing
 
-This project is configured to run a [Jest](https://jestjs.io/) test suite. To run the tests locally, use the following command:
+[Jest](https://jestjs.io/) is configured to use `__tests__/.env` for environment variables. These values are set in `jest.config.js`. You will need to set up a `MAILCHIMP_API_KEY` and `MAILCHIMP_LIST_ID` to get the tests to run. It does not actually export data.
+
+This project is configured to run a Jest test suite. To run the tests locally, use the following command:
 
     $ npm run test
 
 There is also a configuration file that can be used to run the tests using [GitHub Actions](https://github.com/features/actions). This file is `.github/workflows/test.yml`.
-
-Note that Jest is configured to use `__tests__/.env` for environment variables and `__tests__/fixtures/config` as the directory in which to place your test configuration files. These values are set in `jest.config.js`.
 
 ## Other Grouparoo Examples
 
