@@ -25,26 +25,10 @@ exports.default = async function buildConfig() {
        *
        *     mapping: { id: "user_id" }
        *
-       * If this is the first Source for this App, you'll want to create a property in the
-       * bootstrappedProperty section below. Otherwise, you can create properties with the Grouparoo
-       * CLI.
+       * You can create properties with the Grouparoo CLI.
        */
       mapping: {
         id: "user_id",
-      },
-
-      /**
-       * If this is the first Source for this App, you must bootstrap it with an initial property.
-       * To do so, uncomment the lines below and fill in the appropriate values. Otherwise, you can
-       * create properties with the Grouparoo CLI.
-       */
-      bootstrappedProperty: {
-        id: "user_id",
-        name: "user_id",
-        type: "integer",
-        options: {
-          column: "id",
-        },
       },
     },
 
