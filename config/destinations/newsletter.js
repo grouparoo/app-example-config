@@ -11,7 +11,7 @@ exports.default = async function buildConfig() {
       options: {
         listId: process.env.MAILCHIMP_LIST_ID, // The Mailchimp List ID (https://mailchimp.com/help/find-audience-id/)
       },
-
+      syncMode: "sync",
       // Mappings are how you choose which properties to export to this destination.
       // Keys are the name to display in the destination, values are the IDs of the Properties in Grouparoo.
       mapping: {
