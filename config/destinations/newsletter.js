@@ -7,6 +7,7 @@ exports.default = async function buildConfig() {
       type: "mailchimp-export",
       appId: "mailchimp", // The ID of the App this Source uses - e.g. `appId: "mailchimp_app"`
       groupId: "all_emails", // The ID of the group whose members you want to export - e.g. `groupId: "high_value_customers"`
+      syncMode: "additive", // How should Grouparoo sync with this destination? Options: "sync", "additive", "enrich"
 
       options: {
         listId: process.env.MAILCHIMP_LIST_ID, // The Mailchimp List ID (https://mailchimp.com/help/find-audience-id/)
