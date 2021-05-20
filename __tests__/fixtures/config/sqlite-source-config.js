@@ -23,14 +23,6 @@ exports.default = async function buildConfig() {
       mapping: {
         id: "user_id",
       },
-      bootstrappedProperty: {
-        id: "user_id",
-        name: "user_id",
-        type: "integer",
-        options: {
-          column: "id",
-        },
-      },
     },
     //  --- Schedule ---
     {
@@ -111,6 +103,21 @@ exports.default = async function buildConfig() {
         sort: null,
       },
       filters: [],
+    },
+    // --- Property: user-id ---
+    {
+      id: "user_id",
+      name: "user_id",
+      class: "Property",
+      sourceId: "users",
+      type: "integer",
+      unique: true,
+      identifying: true,
+      isArray: false,
+      options: {
+        column: "id",
+        aggregationMethod: "exact",
+      },
     },
   ];
 };
