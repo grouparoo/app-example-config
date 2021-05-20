@@ -12,7 +12,6 @@ exports.default = async function buildConfig() {
       options: {
         column: "id", // The column to use for this Property - e.g. `column: "first_name"`
         aggregationMethod: "exact", // The aggregation method.  Options are: "exact", "average", "count", "sum", "min", "max", "most recent value", "least recent value"
-        sort: null, // You can sort the results by another column in this table
       },
 
       // You can optionally filter the results of this Property.
