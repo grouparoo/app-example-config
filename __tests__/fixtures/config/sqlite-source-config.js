@@ -104,5 +104,20 @@ exports.default = async function buildConfig() {
       },
       filters: [],
     },
+    // --- Property: user-id ---
+    {
+      id: "user_id",
+      name: "user_id",
+      class: "Property",
+      sourceId: "users",
+      type: "integer",
+      unique: true,
+      identifying: true,
+      isArray: false,
+      options: {
+        column: "id",
+        aggregationMethod: "exact",
+      },
+    },
   ];
 };
