@@ -9,13 +9,13 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.4.2",
-    "@grouparoo/mailchimp": "0.4.2",
-    "@grouparoo/sqlite": "0.4.2",
-    "@grouparoo/ui-community": "0.4.2"
+    "@grouparoo/core": "0.4.3",
+    "@grouparoo/mailchimp": "0.4.3",
+    "@grouparoo/sqlite": "0.4.3",
+    "@grouparoo/ui-community": "0.4.3"
   },
   "devDependencies": {
-    "@grouparoo/spec-helper": "0.4.2",
+    "@grouparoo/spec-helper": "0.4.3",
     "csv-parse": "4.16.0",
     "jest": "27.0.6",
     "sqlite3": "5.0.2"
