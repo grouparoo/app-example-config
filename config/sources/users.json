@@ -1,0 +1,26 @@
+[
+  {
+    "class": "Source",
+    "id": "users",
+    "name": "Users",
+    "type": "snowflake-table-import",
+    "appId": "data_warehouse",
+    "options": {
+      "table": "PROFILES"
+    },
+    "mapping": {
+      "ID": "user_id"
+    }
+  },
+  {
+    "class": "Schedule",
+    "id": "users_schedule",
+    "name": "Users schedule",
+    "sourceId": "users",
+    "recurring": true,
+    "recurringFrequency": 900000,
+    "options": {
+      "column": "STAMP"
+    }
+  }
+]

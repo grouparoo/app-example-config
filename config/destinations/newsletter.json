@@ -1,0 +1,21 @@
+{
+  "class": "Destination",
+  "id": "newsletter",
+  "name": "Newsletter",
+  "type": "mailchimp-export",
+  "appId": "mailchimp",
+  "groupId": "all_emails",
+  "syncMode": "sync",
+  "options": {
+    "listId": "1b724bb934"
+  },
+  "mapping": {
+    "FNAME": "first_name",
+    "LNAME": "last_name",
+    "LTV": "ltv",
+    "email_address": "email"
+  },
+  "destinationGroupMemberships": {
+    "High Value": "high_value"
+  }
+}

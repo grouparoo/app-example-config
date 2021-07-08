@@ -1,0 +1,15 @@
+{
+  "class": "Property",
+  "id": "ltv",
+  "type": "float",
+  "name": "LTV",
+  "sourceId": "users",
+  "unique": false,
+  "identifying": false,
+  "isArray": false,
+  "options": {
+    "aggregationMethod": "exact",
+    "column": "LTV"
+  },
+  "filters": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "high_value",
+  "class": "Group",
+  "type": "calculated",
+  "name": "High Value",
+  "rules": [
+    {
+      "propertyId": "email",
+      "operation": {
+        "op": "exists"
+      }
+    },
+    {
+      "propertyId": "ltv",
+      "operation": {
+        "op": "gte"
+      },
+      "match": "500"
+    }
+  ]
+}

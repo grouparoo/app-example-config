@@ -1,0 +1,15 @@
+{
+  "class": "Property",
+  "id": "user_id",
+  "type": "integer",
+  "name": "User ID",
+  "sourceId": "users",
+  "unique": true,
+  "identifying": true,
+  "isArray": false,
+  "options": {
+    "aggregationMethod": "exact",
+    "column": "ID"
+  },
+  "filters": []
+}

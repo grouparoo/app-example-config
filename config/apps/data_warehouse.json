@@ -1,0 +1,14 @@
+{
+  "class": "App",
+  "id": "data_warehouse",
+  "name": "Snowflake Warehouse",
+  "type": "snowflake",
+  "options": {
+    "schema": "PUBLIC",
+    "account": "SNOWFLAKE_ACCOUNT",
+    "database": "SNOWFLAKE_DATABASE",
+    "password": "SNOWFLAKE_PASSWORD",
+    "username": "SNOWFLAKE_USERNAME",
+    "warehouse": "SNOWFLAKE_WAREHOUSE"
+  }
+}

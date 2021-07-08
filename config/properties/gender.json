@@ -1,0 +1,15 @@
+{
+  "class": "Property",
+  "id": "gender",
+  "type": "string",
+  "name": "Gender",
+  "sourceId": "users",
+  "unique": false,
+  "identifying": false,
+  "isArray": false,
+  "options": {
+    "aggregationMethod": "exact",
+    "column": "GENDER"
+  },
+  "filters": []
+}
