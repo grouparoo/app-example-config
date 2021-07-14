@@ -1,0 +1,27 @@
+[
+  {
+    "class": "Source",
+    "id": "purchases",
+    "name": "Purchases",
+    "type": "sqlite-table-import",
+    "appId": "product_db",
+    "options": {
+      "table": "purchases"
+    },
+    "mapping": {
+      "user_id": "user_id"
+    }
+  },
+  {
+    "class": "Schedule",
+    "id": "purchases_schedule",
+    "name": "purchases_schedule",
+    "sourceId": "purchases",
+    "recurring": true,
+    "recurringFrequency": 900000,
+    "options": {
+      "column": "created_at"
+    },
+    "filters": []
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "class": "App",
+  "id": "product_db",
+  "name": "Product DB",
+  "type": "sqlite",
+  "options": {
+    "file": "data/source.sqlite"
+  }
+}

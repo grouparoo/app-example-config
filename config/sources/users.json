@@ -1,0 +1,27 @@
+[
+  {
+    "class": "Source",
+    "id": "users",
+    "name": "Users",
+    "type": "sqlite-table-import",
+    "appId": "product_db",
+    "options": {
+      "table": "users"
+    },
+    "mapping": {
+      "id": "user_id"
+    }
+  },
+  {
+    "class": "Schedule",
+    "id": "users_schedule",
+    "name": "users_schedule",
+    "sourceId": "users",
+    "recurring": true,
+    "recurringFrequency": 900000,
+    "options": {
+      "column": "updated_at"
+    },
+    "filters": []
+  }
+]
