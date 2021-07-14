@@ -1,0 +1,21 @@
+{
+  "class": "Destination",
+  "id": "newsletter",
+  "name": "Newsletter",
+  "type": "mailchimp-export",
+  "appId": "mailchimp",
+  "groupId": "all_emails",
+  "syncMode": "additive",
+  "options": {
+    "listId": "b9ea7df69b"
+  },
+  "mapping": {
+    "FNAME": "first_name",
+    "LNAME": "last_name",
+    "email_address": "email",
+    "language": "language"
+  },
+  "destinationGroupMemberships": {
+    "High Value Spanish Speakers": "high_value_spanish_speakers"
+  }
+}

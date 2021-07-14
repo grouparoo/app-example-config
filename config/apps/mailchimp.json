@@ -1,0 +1,9 @@
+{
+  "class": "App",
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "type": "mailchimp",
+  "options": {
+    "apiKey": "624c084f1aa6ff62e8337bd4774373ed-us4"
+  }
+}
