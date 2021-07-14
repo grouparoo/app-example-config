@@ -7,7 +7,7 @@
   "groupId": "all_emails",
   "syncMode": "additive",
   "options": {
-    "listId": "b9ea7df69b"
+    "listId": "MAILCHIMP_LIST_ID"
   },
   "mapping": {
     "FNAME": "first_name",
