@@ -4,14 +4,14 @@ const parse = require("csv-parse/lib/sync");
 const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
 
-const dbPath = path.join(__dirname, "./source.sqlite");
+const dbPath = path.resolve(path.join(__dirname, "source.sqlite"));
 
 console.log(`ℹ️  Source database path: ${dbPath}`);
 
 // ---------------------------------------- | Checks
 
 if (fs.existsSync(dbPath)) {
-  console.log(`❌ Source database already exists. Please delete to reimport.`);
+  console.log(`❌ Source database already exists - Please delete to reimport`);
   process.exit(1);
 }
 
@@ -29,9 +29,9 @@ const tableColumns = {
     "ip_address" TEXT,
     "avatar" TEXT,
     "language" TEXT,
-    "deactivated" boolean,
-    "created_at" datetime,
-    "updated_at" datetime
+    "deactivated" BOOLEAN,
+    "created_at" DATETIME,
+    "updated_at" DATETIME
   `,
   purchases: `
     "id" INTEGER PRIMARY KEY NOT NULL,
@@ -48,22 +48,38 @@ const tableColumns = {
 
 const runQuery = promisify(db.all).bind(db);
 
-const buildKeyList = (obj) => Object.keys(obj).join(",");
+const buildKeyList = (obj) => {
+  return Object.keys(obj).join(",");
+};
 
 const buildValueList = (obj) => {
-  return Object.values(obj)
-    .map((x) => (["string", "object"].includes(typeof x) ? `"${x}"` : x))
-    .join(",");
+  const out = [];
+  for (const x of Object.values(obj)) {
+    if (x === null || x === undefined) {
+      out.push("NULL");
+    } else if (["string", "object"].includes(typeof x)) {
+      out.push(`"${x}"`);
+    } else {
+      out.push(x);
+    }
+  }
+  return out.join(", ");
+};
+
+const dropTable = async (tableName) => {
+  const query = `DROP TABLE IF EXISTS ${tableName}`;
+  await runQuery(query);
+  console.log(`✅ Dropped ${tableName} table`);
 };
 
 const createTable = async (tableName) => {
   const query = `CREATE TABLE IF NOT EXISTS ${tableName} (${tableColumns[tableName]})`;
   await runQuery(query);
-  console.log(`✅ Created ${tableName} table.`);
+  console.log(`✅ Created ${tableName} table`);
 };
 
 const importCsv = async (tableName) => {
-  const csvFilePath = path.join(__dirname, `./${tableName}.csv`);
+  const csvFilePath = path.join(__dirname, `${tableName}.csv`);
   const rows = parse(fs.readFileSync(csvFilePath), { columns: true });
 
   for (const row of rows) {
@@ -71,10 +87,11 @@ const importCsv = async (tableName) => {
     const values = buildValueList(row);
     await runQuery(`INSERT INTO ${tableName} (${keys}) VALUES (${values})`);
   }
-  console.log(`✅ Imported ${tableName}.csv.`);
+  console.log(`✅ Imported ${tableName}.csv`);
 };
 
 const doImport = async (tableName) => {
+  await dropTable(tableName);
   await createTable(tableName);
   await importCsv(tableName);
 };
