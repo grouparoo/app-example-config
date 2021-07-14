@@ -1,10 +1,10 @@
 # Grouparoo Example: Declarative Sync
 
-This is an example Grouparoo application that is configured using Declarative Sync. It will sync data from a local SQLite database (created from CSV files) to Mailchimp.
+This is an example Grouparoo application that is configured using declarative configuration set up by our development tool UI. It will sync data from a local SQLite database to Mailchimp.
 
-You can learn more about declarative sync by [reading the documentation](https://www.grouparoo.com/docs/config/code-config). Or take a brief tour by watching [this video](https://www.youtube.com/watch?v=kQ789gMXJB8).
+You can learn more about how it works by [reading the documentation](https://www.grouparoo.com/docs/config/code-config). Or take a brief tour by watching [this video](https://www.youtube.com/watch?v=FCtZknaX1WA).
 
-[![Grouparoo Declarative Sync](https://img.youtube.com/vi/kQ789gMXJB8/0.jpg)](https://www.youtube.com/watch?v=kQ789gMXJB8)
+[![Grouparoo Development Workflow](https://img.youtube.com/vi/FCtZknaX1WA/0.jpg)](https://www.youtube.com/watch?v=FCtZknaX1WA)
 
 ## Setup
 
@@ -33,6 +33,13 @@ To start running Grouparoo, run the `start` script:
     $ npm start
 
 Now you're off to the races! This will begin the import and export and will also start a UI web server, which you can visit at http://localhost:3000/.
+
+## Updating
+
+The configuration can be updated via our UI:
+
+    $ npm install -g grouparoo
+    $ grouparoo config
 
 ## Testing
 
