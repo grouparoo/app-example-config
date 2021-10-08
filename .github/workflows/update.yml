@@ -16,18 +16,15 @@ jobs:
       - run: cp .env.example .env
       - run: npm install
       - run: sudo npm install -g npm-check-updates
-      - run: npm-check-updates "@grouparoo/*" -u
+      - run: npm-check-updates "/grouparoo/" -u
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
-      - name: Create commits
-        run: |
-          git config user.name 'Grouparoo Bot'
-          git config user.email 'hello@grouparoo.com'
-          git commit -am "Updating Packages to v${{ env.CORE_VERSION }}"
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with: 
-          reviewers: ${{ secrets.BOT_PR_REVIEWER_USERS }}
-          title: "Update to Grouparoo v${{ env.CORE_VERSION }}"
-          body: "Grouparoo v${{ env.CORE_VERSION }} is now available."
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating Packages to v${{ env.CORE_VERSION }}
+          commit_user_name: Grouparoo Bot
+          commit_user_email: hello@grouparoo.com
+          commit_author: Grouparoo Bot <hello@grouparoo.com>
+          branch: ${{ github.head_ref }}
+          tagging_message: v${{ env.CORE_VERSION }}
