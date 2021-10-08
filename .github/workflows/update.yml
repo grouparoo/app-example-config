@@ -25,7 +25,6 @@ jobs:
           git config user.name 'Grouparoo Bot'
           git config user.email 'hello@grouparoo.com'
           git commit -am "Updating Packages to v${{ env.CORE_VERSION }}"
-          git tag -a "v${{ env.CORE_VERSION }}" -m "v${{ env.CORE_VERSION }}"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with: 
