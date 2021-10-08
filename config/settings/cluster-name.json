@@ -1,7 +1,0 @@
-{
-  "id": "cluster-name",
-  "class": "Setting",
-  "pluginName": "core",
-  "key": "cluster-name",
-  "value": "EvanCo"
-}
