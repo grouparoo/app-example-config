@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "language",
   "type": "string",
-  "name": "Language",
+  "key": "Language",
   "sourceId": "users",
   "unique": false,
   "identifying": false,

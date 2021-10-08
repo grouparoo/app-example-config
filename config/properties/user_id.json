@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "user_id",
   "type": "integer",
-  "name": "User ID",
+  "key": "User ID",
   "sourceId": "users",
   "unique": true,
   "identifying": true,

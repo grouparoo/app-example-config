@@ -2,8 +2,9 @@
   {
     "class": "Source",
     "id": "users",
+    "modelId": "users",
     "name": "Users",
-    "type": "sqlite-table-import",
+    "type": "sqlite-import-table",
     "appId": "product_db",
     "options": {
       "table": "users"
@@ -19,6 +20,7 @@
     "sourceId": "users",
     "recurring": true,
     "recurringFrequency": 900000,
+    "confirmRecords": false,
     "options": {
       "column": "updated_at"
     },

@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "purchase_count",
   "type": "integer",
-  "name": "Purchase Count",
+  "key": "Purchase Count",
   "sourceId": "purchases",
   "unique": false,
   "identifying": false,

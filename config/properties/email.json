@@ -2,7 +2,7 @@
   "class": "Property",
   "id": "email",
   "type": "email",
-  "name": "Email",
+  "key": "Email",
   "sourceId": "users",
   "unique": true,
   "identifying": false,

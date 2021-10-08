@@ -2,8 +2,9 @@
   {
     "class": "Source",
     "id": "purchases",
+    "modelId": "users",
     "name": "Purchases",
-    "type": "sqlite-table-import",
+    "type": "sqlite-import-table",
     "appId": "product_db",
     "options": {
       "table": "purchases"
@@ -19,6 +20,7 @@
     "sourceId": "purchases",
     "recurring": true,
     "recurringFrequency": 900000,
+    "confirmRecords": false,
     "options": {
       "column": "created_at"
     },
