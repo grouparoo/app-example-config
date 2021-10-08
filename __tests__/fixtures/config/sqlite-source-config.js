@@ -10,13 +10,21 @@ exports.default = async function buildConfig() {
         file: "data/source.sqlite",
       },
     },
+    // --- Model ---
+    {
+      class: "Model",
+      id: "users",
+      name: "Users",
+      type: "profile",
+    },
     // --- Source ---
     {
       class: "source",
       id: "users",
       name: "users",
-      type: "sqlite-table-import",
+      type: "sqlite-import-table",
       appId: "product_db",
+      modelId: "users",
       options: {
         table: "users",
       },
