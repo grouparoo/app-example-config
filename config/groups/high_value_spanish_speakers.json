@@ -2,6 +2,7 @@
   "id": "high_value_spanish_speakers",
   "class": "Group",
   "type": "calculated",
+  "modelId": "users",
   "name": "High Value Spanish Speakers",
   "rules": [
     {
