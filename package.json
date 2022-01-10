@@ -18,7 +18,7 @@
     "@grouparoo/spec-helper": "0.7.8",
     "@grouparoo/ui-config": "0.7.8",
     "csv-parse": "4.16.3",
-    "jest": "27.4.5",
+    "jest": "27.4.7",
     "sqlite3": "5.0.2"
   },
   "scripts": {
