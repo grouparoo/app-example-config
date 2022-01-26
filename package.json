@@ -9,14 +9,14 @@
     "node": ">=12.0.0 <17.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.7.8",
-    "@grouparoo/mailchimp": "0.7.8",
-    "@grouparoo/sqlite": "0.7.8",
-    "@grouparoo/ui-community": "0.7.8"
+    "@grouparoo/core": "0.8.0",
+    "@grouparoo/mailchimp": "0.8.0",
+    "@grouparoo/sqlite": "0.8.0",
+    "@grouparoo/ui-community": "0.8.0"
   },
   "devDependencies": {
-    "@grouparoo/spec-helper": "0.7.8",
-    "@grouparoo/ui-config": "0.7.8",
+    "@grouparoo/spec-helper": "0.8.0",
+    "@grouparoo/ui-config": "0.8.0",
     "csv-parse": "4.16.3",
     "jest": "27.4.7",
     "sqlite3": "5.0.2"
